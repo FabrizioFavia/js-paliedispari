@@ -1,3 +1,30 @@
+/* FUNZIONE PRECEDENTEMENTE INSERITA NELLA PRIMA COMMIT */
+
+/* function palindrome() {
+
+
+    let word = prompt("inserisci una parola");
+    let reverseArray = [];
+    let reverseWord;
+
+    for (let i = word.length - 1; i >= 0; i--) {
+        const letter = word[i];
+
+        reverseArray.push(letter);
+        reverseWord = reverseArray.join("");
+    }
+
+    if (reverseWord == word) {
+        alert(`${reverseWord} è una parola palindroma`)
+
+    } else {
+        alert(`${word} non è una parola palindroma`)
+    }
+
+    return reverseWord;
+
+} */
+
 /**
  * isPalindromo(word): funzione che che controlla se la parola è palindroma.
  * word: argomento della funzione di tipo string.
@@ -15,10 +42,10 @@ function isPalindromo(word) {
          **/
 
         if (word[i] != word.split('').reverse()[i]) {
-            return false;
+            return "La parola inserita non è palindroma";
         }
     }
-    return true;
+    return `${word} è un palindromo`;
 }
 
 
@@ -47,6 +74,7 @@ function oddOrEvenGame() {
     let max = 5;
     let computerNumber = numberGenerator(min, max);
     let evenSumResult = null;
+    
     do {
         userNumber = Number(prompt(`"Scegli un numero tra ${min} e ${max}"`));
 
@@ -62,8 +90,6 @@ function oddOrEvenGame() {
     if (userChoise === "pari") {
         evenChoice = true;
     }
-
-
 
     /* TERNARIA */
     /*   evenChoice = userChoise === "pari" ? true : false; */
